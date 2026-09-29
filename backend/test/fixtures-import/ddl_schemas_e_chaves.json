@@ -1,0 +1,1 @@
+{"entrada":"ddl_schemas_e_chaves","avisos":["CHECK importado em \"estacao\" sem validação da expressão: length(nome) > 2","CHECK importado em \"estacao\" sem validação da expressão: id > 0"],"erros":[]}

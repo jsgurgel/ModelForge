@@ -1,0 +1,1 @@
+{"entrada":"amostra_seta_sem_coluna","dsl":"tabela a {\n    -> b.id\n}\n","ddl":"CREATE TABLE a (\n    \n);\n\n","erros":["Linha 2: coluna inválida (esperado \"nome tipo\"): -> b.id"]}

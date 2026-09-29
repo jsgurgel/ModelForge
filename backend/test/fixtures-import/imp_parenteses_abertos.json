@@ -1,0 +1,1 @@
+{"entrada":"imp_parenteses_abertos","avisos":["Instrução CREATE TABLE não reconhecida (parênteses não fecham): CREATE TABLE sem_fecha (id int; CREATE TABLE outra (id int);"],"erros":["Nenhuma instrução CREATE TABLE, VIEW, SEQUENCE, DOMAIN ou TYPE encontrada no script."]}

@@ -1,0 +1,31 @@
+# Sobe o back e o front juntos:  docker compose up --build
+# Cada um também sobe sozinho:   veja README (docker build em backend/ e frontend/).
+services:
+  backend:
+    build: ./backend
+    # Segurança: defina API_TOKEN no arquivo .env (veja .env.example) para exigir "Authorization: Bearer <token>" em toda a API
+    # (exceto /api/saude). Sem ele a API é aberta - só use assim em máquina local.
+    environment:
+      API_TOKEN: ${API_TOKEN:-}
+      BANCO_HOSTS_PERMITIDOS: ${BANCO_HOSTS_PERMITIDOS:-}
+      CONEXOES_KEY: ${CONEXOES_KEY:-}
+      FRONTEND_ORIGIN: ${FRONTEND_ORIGIN:-http://localhost:5173}
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-3100}:3000"
+    volumes:
+      - diagramas:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    environment:
+      BACKEND_URL: http://backend:3000
+    ports:
+      - "${FRONTEND_PORT:-5173}:8080"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  diagramas:

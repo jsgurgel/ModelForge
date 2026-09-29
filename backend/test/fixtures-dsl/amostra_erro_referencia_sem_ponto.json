@@ -1,0 +1,1 @@
+{"entrada":"amostra_erro_referencia_sem_ponto","dsl":"tabela a {\n    id int pk\n    b_id int -> b\n}\n","ddl":"CREATE TABLE a (\n    id int PRIMARY KEY,\n    b_id int\n);\n\n","erros":["Linha 3: referência inválida (esperado tabela.coluna): b_id int -> b"]}

@@ -1,0 +1,1 @@
+{"entrada":"amostra_tipo_com_espaco","dsl":"tabela a {\n    d double precision not null\n    ts timestamp with time zone default now()\n}\n","ddl":"CREATE TABLE a (\n    d double precision not null,\n    ts timestamp with time zone default now()\n);\n\n","erros":[]}

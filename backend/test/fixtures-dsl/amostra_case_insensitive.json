@@ -1,0 +1,1 @@
+{"entrada":"amostra_case_insensitive","dsl":"TABELA a {\n    id int Pk\n    CHAVE (id)\n    UNICO(id)\n}\n","ddl":"CREATE TABLE a (\n    id int PRIMARY KEY,\n    PRIMARY KEY (id),\n    UNIQUE (id)\n);\n\n","erros":[]}

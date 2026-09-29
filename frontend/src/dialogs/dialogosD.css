@@ -1,0 +1,19 @@
+/* Diálogos do stream D: legenda, desenhador, tipos, IR, construtor de EAP, exportar imagem, prévia de impressão. */
+.dd-tabela { width: 100%; border-collapse: collapse; }
+.dd-tabela th, .dd-tabela td { padding: 3px 6px; border-bottom: 1px solid var(--borda, #ccc); text-align: left; vertical-align: middle; }
+.dd-tabela input[type='text'], .dd-tabela select { width: 100%; box-sizing: border-box; }
+.dd-tabela input[type='color'] { width: 34px; height: 24px; padding: 0; }
+.dd-barra { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+.dd-barra label { display: inline-flex; gap: 4px; align-items: center; }
+.dd-grade { display: grid; grid-template-columns: max-content 1fr; gap: 6px 10px; align-items: center; }
+.dd-grade input[type='text'], .dd-grade input[type='number'], .dd-grade select, .dd-grade textarea { width: 100%; box-sizing: border-box; }
+.dd-erro { color: #d9480f; margin: 6px 0; }
+.dd-desenho { display: flex; gap: 12px; }
+.dd-desenho canvas { border: 1px solid var(--borda, #999); background: #fff; cursor: crosshair; max-width: 100%; touch-action: none; }
+.dd-desenho-lista { width: 200px; max-height: 420px; overflow: auto; border: 1px solid var(--borda, #ccc); }
+.dd-desenho-lista div { padding: 3px 6px; cursor: pointer; }
+.dd-desenho-lista div.sel { background: var(--selecao-fundo, #cfe0f5); color: #111; }
+.dd-previa { display: flex; flex-wrap: wrap; gap: 10px; max-height: 380px; overflow: auto; background: #8884; padding: 10px; }
+.dd-previa figure { margin: 0; text-align: center; font-size: 11px; }
+.dd-previa img { display: block; background: #fff; box-shadow: 0 1px 4px #0005; max-width: 260px; }
+.dd-mono { font-family: ui-monospace, monospace; white-space: pre; }

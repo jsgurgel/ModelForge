@@ -1,0 +1,1 @@
+{"entrada":"imp_sqlserver","avisos":["ALTER TABLE: tabela não encontrada no script nem no modelo: dbo].[Cidade","FK em Cidade: tabela de origem não encontrada: [Pais"],"erros":[]}

@@ -1,0 +1,1 @@
+{"entrada":"amostra_valida_chave_composta","dsl":"tabela item {\n    pedido_id int\n    produto_id int\n    qtd int not null\n    chave (pedido_id, produto_id)\n    unico (pedido_id,  qtd)\n}\n","ddl":"CREATE TABLE item (\n    pedido_id int,\n    produto_id int,\n    qtd int not null,\n    PRIMARY KEY (pedido_id, produto_id),\n    UNIQUE (pedido_id,  qtd)\n);\n\n","erros":[]}

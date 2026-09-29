@@ -1,0 +1,18 @@
+.cor-botao { display: flex; align-items: center; gap: 4px; width: 100%; border: 0; border-radius: 0; text-align: left; height: 21px; padding: 0 4px; }
+.cor-amostra { display: inline-block; width: 22px; height: 12px; border: 1px solid var(--borda); flex: none; }
+.cor-nenhuma { background: repeating-linear-gradient(45deg, #ccc 0 3px, #fff 3px 6px); }
+.cor-texto { color: var(--texto-suave); overflow: hidden; text-overflow: ellipsis; }
+.popover-insp { position: fixed; z-index: 3000; background: var(--painel); color: var(--texto); border: 1px solid var(--borda); box-shadow: 0 4px 14px rgba(0,0,0,.3); padding: 6px; font-size: 12px; }
+.cor-grade { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; }
+.cor-cel { width: 100%; aspect-ratio: 1; min-height: 14px; border: 1px solid var(--borda); padding: 0; border-radius: 0; cursor: pointer; }
+.cor-cel.sel { outline: 2px solid var(--selecao); }
+.cor-titulo { font-weight: 600; margin: 4px 0 2px; }
+.cor-rodape { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-top: 6px; }
+.fonte-cols { display: grid; grid-template-columns: 1.3fr 1fr; gap: 6px; }
+.fonte-cols select, .fonte-cols input { width: 100%; }
+.fonte-previa { margin: 6px 0 0; padding: 2px 6px; border: 1px solid var(--borda); min-height: 34px; }
+.prop-valor .desab, .linha-prop.desab .prop-rotulo { opacity: .5; }
+.linha-prop.desab .prop-valor > * { pointer-events: none; opacity: .5; }
+.linha-prop.sel { background: var(--hover); }
+.painel-dica { border-top: 1px solid var(--borda); background: var(--bg); padding: 4px 6px; font-size: 12px; min-height: 40px; white-space: pre-wrap; position: sticky; bottom: 0; }
+.painel-dica .dica-titulo { font-weight: 600; }

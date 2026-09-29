@@ -1,0 +1,1 @@
+{"entrada":"amostra_referencia_espacos","dsl":"tabela a {\n    b_id int   ->   b  .  id\n}\n","ddl":"CREATE TABLE a (\n    b_id int REFERENCES b (id)\n);\n\n","erros":[]}

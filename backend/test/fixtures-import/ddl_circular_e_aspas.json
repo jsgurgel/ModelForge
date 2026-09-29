@@ -1,0 +1,1 @@
+{"entrada":"ddl_circular_e_aspas","avisos":["Instrução CREATE TABLE não reconhecida: CREATE TABLE \"Tabela Maiuscula\" ( \"Id Coluna\" INTEGER PRIMAR...","Definição de coluna não reconhecida: id"],"erros":[]}

@@ -1,0 +1,33 @@
+/* Estilos do motor de interação (Canvas, menu de contexto, divisor, splash, configuração). */
+.id-objeto { font-size: 9px; fill: var(--texto-suave, #888); pointer-events: none; user-select: none; }
+.id-objeto.ancora { fill: var(--destaque, #36c); font-size: 11px; }
+.dimensoes { font-size: 11px; fill: var(--destaque, #36c); pointer-events: none; user-select: none; }
+.alca.ponto-dobra { fill: var(--destaque, #36c); stroke: #fff; stroke-width: 1; cursor: move; }
+.alca.alca-texto { cursor: move; fill: #f5a623; }
+.menu-contexto { min-width: 230px; max-height: 80vh; overflow-y: auto; }
+
+.divisor-sidebar { width: 5px; flex-shrink: 0; cursor: col-resize; background: transparent; margin-left: -3px; z-index: 5; }
+.divisor-sidebar:hover, .divisor-sidebar.arrastando { background: var(--destaque, #36c); opacity: 0.5; }
+
+.config-painel { padding: 8px 10px; display: flex; flex-direction: column; gap: 8px; }
+.config-painel fieldset { border: 1px solid var(--borda); border-radius: 4px; padding: 6px 8px; display: flex; flex-direction: column; gap: 5px; }
+.config-painel legend { font-weight: 600; padding: 0 4px; }
+.config-painel label { display: flex; align-items: center; gap: 6px; }
+.config-painel label.linha { justify-content: space-between; }
+.config-painel input[type='number'] { width: 64px; }
+.config-painel .recente { display: block; width: 100%; text-align: left; background: transparent; border: 0; padding: 2px 4px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.config-painel .recente:hover { background: var(--hover); }
+
+.status-historico { position: absolute; right: 0; bottom: 24px; width: 420px; max-width: 90vw; max-height: 240px; overflow: auto; background: var(--painel); border: 1px solid var(--borda); box-shadow: 0 -4px 12px rgba(0,0,0,.25); padding: 4px 8px; z-index: 70; }
+.status-historico div { padding: 2px 0; border-bottom: 1px dotted var(--borda); }
+.status-msg-botao { background: transparent; border: 0; padding: 0 4px; cursor: pointer; color: inherit; }
+
+.splash { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.35); }
+.splash-cartao { background: var(--painel); border: 1px solid var(--borda); border-radius: 8px; padding: 28px 40px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
+.splash-cartao h1 { margin: 8px 0 4px; }
+.splash-banner { display: block; max-width: min(480px, 80vw); height: auto; margin: 0 auto 12px; border-radius: 6px; }
+.splash-cartao p { margin: 2px 0; color: var(--texto-suave); }
+
+/* G1: destaque do alvo sob o mouse com ferramenta de criação armada (ProcessaOverDraw) e alças de região da raia. */
+.sobre-ferramenta { stroke: var(--selecao, #36c); stroke-width: 3; stroke-opacity: 0.55; }
+.alca.alca-regiao { fill: #d0d0d0; stroke: #555; stroke-width: 1; cursor: e-resize; }

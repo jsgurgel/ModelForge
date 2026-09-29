@@ -1,0 +1,1 @@
+{"entrada":"amostra_comentarios_e_crlf","dsl":"// cabecalho\r\ntabela a { // abre\r\n    id int PK // chave\r\n    x text\r\n}\r\n\r\n","ddl":"CREATE TABLE a (\n    id int PRIMARY KEY,\n    x text\n);\n\n","erros":[]}

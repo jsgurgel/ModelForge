@@ -1,0 +1,1 @@
+{"entrada":"banco_impacto_ddl","avisos":["Schema não é representada no modelo e foi ignorada: CREATE SCHEMA IF NOT EXISTS impactos","Function \"fn_check_culturas_exclusive\" importada sem validação do corpo.","Function \"fn_check_impactos_exclusive\" importada sem validação do corpo.","Function \"fn_check_restricoes_exclusive\" importada sem validação do corpo."],"erros":[]}

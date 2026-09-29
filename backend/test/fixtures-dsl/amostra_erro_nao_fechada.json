@@ -1,0 +1,1 @@
+{"entrada":"amostra_erro_nao_fechada","dsl":"tabela a {\n    id int pk\n","ddl":"","erros":["Tabela \"a\" não foi fechada com '}'."]}

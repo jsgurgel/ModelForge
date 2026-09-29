@@ -1,0 +1,1 @@
+{"entrada":"amostra_erro_coluna_sem_tipo","dsl":"tabela a {\n    id\n    nome varchar(10)\n}\n","ddl":"CREATE TABLE a (\n    id,\n    nome varchar(10)\n);\n\n","erros":["Linha 2: coluna inválida (esperado \"nome tipo\"): id"]}

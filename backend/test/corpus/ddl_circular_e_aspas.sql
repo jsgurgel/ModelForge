@@ -1,0 +1,19 @@
+CREATE TABLE a (
+  id INTEGER PRIMARY KEY,
+  b_id INTEGER
+);
+CREATE TABLE b (
+  id INTEGER PRIMARY KEY,
+  a_id INTEGER
+);
+ALTER TABLE a ADD CONSTRAINT fk_a_b FOREIGN KEY (b_id) REFERENCES b (id);
+ALTER TABLE b ADD CONSTRAINT fk_b_a FOREIGN KEY (a_id) REFERENCES a (id) ON DELETE CASCADE;
+CREATE TABLE "Tabela Maiuscula" (
+  "Id Coluna" INTEGER PRIMARY KEY,
+  "order" VARCHAR(10),
+  "col""aspa" TEXT
+);
+CREATE TABLE sem_tipo (
+  id,
+  nome VARCHAR(10)
+);

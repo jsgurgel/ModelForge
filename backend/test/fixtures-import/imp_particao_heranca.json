@@ -1,0 +1,1 @@
+{"entrada":"imp_particao_heranca","avisos":["Instrução CREATE TABLE não reconhecida: CREATE TABLE medida_semlimite PARTITION OF medida","Tabela \"multi\" herda de 2 tabelas; o modelo guarda apenas a primeira (pessoa)."],"erros":[]}

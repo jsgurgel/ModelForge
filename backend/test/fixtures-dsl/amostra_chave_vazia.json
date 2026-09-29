@@ -1,0 +1,1 @@
+{"entrada":"amostra_chave_vazia","dsl":"tabela t {\n    id int\n    chave ()\n    unico (   )\n}\n","ddl":"CREATE TABLE t (\n    id int,\n    PRIMARY KEY (),\n    UNIQUE ()\n);\n\n","erros":[]}

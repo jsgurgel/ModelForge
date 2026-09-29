@@ -1,0 +1,1 @@
+{"entrada":"ddl_indices_e_gatilhos","avisos":["Instrução CREATE TRIGGER não reconhecida: CREATE TRIGGER BEFORE UPDATE ON estacao FOR EACH STATEMENT E...","Function \"auditar\" importada sem validação do corpo."],"erros":[]}

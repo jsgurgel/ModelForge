@@ -1,0 +1,1 @@
+{"entrada":"amostra_multiplos_espacos_tabs","dsl":"tabela   a\t{\n\tid\t\tint   pk   \n    nome    varchar(10)    not    null\n}\n","ddl":"CREATE TABLE a (\n    id int PRIMARY KEY,\n    nome varchar(10) not null\n);\n\n","erros":[]}

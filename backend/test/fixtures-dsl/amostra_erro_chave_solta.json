@@ -1,0 +1,1 @@
+{"entrada":"amostra_erro_chave_solta","dsl":"}\ntabela a {\n    id int\n}\n}\n","ddl":"CREATE TABLE a (\n    id int\n);\n\n","erros":["Linha 1: '}' sem 'tabela ... {' correspondente.","Linha 5: '}' sem 'tabela ... {' correspondente."]}

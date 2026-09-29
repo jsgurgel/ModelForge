@@ -1,0 +1,1 @@
+{"entrada":"amostra_erro_conteudo_fora","dsl":"id int pk\ntabela a {\n    id int\n}\nlixo aqui\n","ddl":"CREATE TABLE a (\n    id int\n);\n\n","erros":["Linha 1: conteúdo fora de um bloco 'tabela ... { }': id int pk","Linha 5: conteúdo fora de um bloco 'tabela ... { }': lixo aqui"]}

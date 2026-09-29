@@ -1,0 +1,1 @@
+{"entrada":"amostra_erro_nova_sem_fechar","dsl":"tabela a {\n    id int pk\ntabela b {\n    id int pk\n}\n","ddl":"CREATE TABLE b (\n    id int PRIMARY KEY\n);\n\n","erros":["Linha 3: tabela \"a\" não foi fechada com '}' antes de iniciar uma nova tabela."]}
