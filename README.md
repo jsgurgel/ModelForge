@@ -2,6 +2,11 @@
 
 [![Licença: AGPL-3.0](https://img.shields.io/badge/licen%C3%A7a-AGPL--3.0-blue.svg)](LICENSE)
 
+<!--
+  TODO: substituir a imagem estática abaixo por um GIF/vídeo curto (20-30s) mostrando o fluxo
+  Conceitual -> diálogo de decisão -> Lógico -> DDL. Veja "Gravando o demo" no CONTRIBUTING.md
+  ou grave com Peek/ScreenToGif e salve como demo.gif na raiz do projeto.
+-->
 ![ModelForge](ModelForge.png)
 
 **Do conceito ao banco, no navegador.** O ModelForge é uma aplicação web para desenhar modelos de dados, converter entre
@@ -9,6 +14,13 @@ níveis de abstração e conversar com bancos reais, tudo na mesma tela. O front
 e os dois são escritos em TypeScript.
 
 Autor: **Jairo dos Santos Gurgel** (jsgurgel@hotmail.com).
+
+> **English:** ModelForge is a browser-based data modeling tool — design Conceptual, Logical, NoSQL, Flow, Activity, WBS
+> and free-form diagrams, convert Conceptual ⇄ Logical (with dialogs for ambiguous cases), and generate DDL, ORM code
+> (JPA, SQLAlchemy, Prisma), HTML docs and data dictionaries. It connects to real databases (PostgreSQL, MySQL, SQL
+> Server, SQLite, MongoDB) to import schemas, run migrations and query data through the built-in SQL Studio. Frontend
+> is React + Vite, backend is NestJS, both in TypeScript, licensed under AGPL-3.0. See [README.en.md](README.en.md)
+> for the full English documentation.
 
 ## O que ele faz
 

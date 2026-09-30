@@ -23,6 +23,21 @@ Esperamos que melhorias feitas em forks e versões modificadas sejam enviadas de
 em benefício de todos. Lembre-se de que a licença exige que versões modificadas, inclusive oferecidas como serviço
 pela rede, tenham o código-fonte disponibilizado sob a mesma licença e preservem a atribuição de autoria (veja [NOTICE](NOTICE)).
 
+## Gravando o demo do README
+
+O topo do README usa `ModelForge.png` como placeholder; a substituição por um GIF curto (20-30s) do fluxo
+Conceitual → diálogo de decisão → Lógico → DDL é o item de maior impacto para quem descobre o projeto (ex.: LinkedIn,
+Hacker News). Passo a passo:
+
+1. Suba o backend e o frontend (veja [Como rodar](README.md#como-rodar)).
+2. Grave a tela só da janela do navegador com uma ferramenta leve: [Peek](https://github.com/phw/peek) (Linux, exporta
+   GIF direto), [ScreenToGif](https://www.screentogif.com/) (Windows) ou `ffmpeg` + [gifski](https://gif.ski/) para
+   melhor qualidade/tamanho (grave em `.mp4` e converta: `ffmpeg -i demo.mp4 frame%04d.png && gifski -o demo.gif frame*.png`).
+3. Roteiro sugerido: criar duas ou três entidades no Conceitual → converter para Lógico (mostrando um diálogo de
+   decisão) → gerar DDL. Mantenha embaixo de 30s e 5-8 MB (limite comum de preview no GitHub).
+4. Salve como `demo.gif` na raiz do projeto e troque a imagem no topo do README:
+   `![Demo do ModelForge](demo.gif)`.
+
 ## Licença das contribuições
 
 Ao enviar uma contribuição, você concorda que ela será licenciada sob a AGPL-3.0-or-later, a mesma do projeto.
