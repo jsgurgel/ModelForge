@@ -2,12 +2,7 @@
 
 [![Licença: AGPL-3.0](https://img.shields.io/badge/licen%C3%A7a-AGPL--3.0-blue.svg)](LICENSE)
 
-<!--
-  TODO: substituir a imagem estática abaixo por um GIF/vídeo curto (20-30s) mostrando o fluxo
-  Conceitual -> diálogo de decisão -> Lógico -> DDL. Veja "Gravando o demo" no CONTRIBUTING.md
-  ou grave com Peek/ScreenToGif e salve como demo.gif na raiz do projeto.
--->
-![ModelForge](ModelForge.png)
+![Demo do ModelForge](docs/demo.gif)
 
 **Do conceito ao banco, no navegador.** O ModelForge é uma aplicação web para desenhar modelos de dados, converter entre
 níveis de abstração e conversar com bancos reais, tudo na mesma tela. O front-end é **React + Vite**, o back-end é **NestJS**,

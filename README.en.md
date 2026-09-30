@@ -2,7 +2,7 @@
 
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 
-![ModelForge](ModelForge.png)
+![ModelForge demo](docs/demo.gif)
 
 **From concept to database, in the browser.** ModelForge is a web application for designing data models, converting
 between abstraction levels and talking to real databases, all in the same screen. The front-end is **React + Vite**,
