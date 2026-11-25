@@ -196,7 +196,9 @@ export async function renderizarPaginas(doc: Diagrama, cfg: ConfigPagina = CONFI
     const g = cv.getContext('2d')!;
     g.fillStyle = '#ffffff';
     g.fillRect(0, 0, cv.width, cv.height);
-    g.drawImage(cheio, p.x * real, p.y * real, p.w * real, p.h * real, 0, 0, p.w * real * (cv.width / (plano.recorteW * real)), p.h * real * (cv.height / (plano.recorteH * real)));
+    const kx = cv.width / plano.recorteW;
+    const ky = cv.height / plano.recorteH;
+    g.drawImage(cheio, p.x * real, p.y * real, p.w * real, p.h * real, plano.deslocX * kx, plano.deslocY * ky, p.w * kx, p.h * ky);
     return { canvas: cv, col: p.col, row: p.row };
   });
   return { paginas, cols: plano.cols, rows: plano.rows, escala: plano.escala, dpi, cfg };

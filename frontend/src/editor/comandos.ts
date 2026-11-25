@@ -112,10 +112,7 @@ const lista: Comando[] = [
     const aba = abaAtiva();
     if (aba && !imprimir(aba.doc)) aviso('Imprimir', 'O navegador bloqueou a janela de impressão.');
   }, { atalho: 'Ctrl+P', icone: 'menu_imprimir.png', precisaAba: true }),
-  c('exportar.png', 'Exportar PNG...', async () => {
-    const aba = abaAtiva();
-    if (aba) baixar(`${aba.doc.nome}.png`, await gerarPng(aba.doc), 'image/png');
-  }, { precisaAba: true, icone: 'menu_exportar.png' }),
+  //# exportar.png (diálogo) e exportar.pdf ficam em comandosD.ts.
   c('exportar.pngDireto', 'Exportar PNG...', async () => {
     const aba = abaAtiva();
     if (aba) baixar(`${aba.doc.nome}.png`, await gerarPng(aba.doc), 'image/png');
@@ -124,10 +121,6 @@ const lista: Comando[] = [
     const aba = abaAtiva();
     if (aba) baixar(`${aba.doc.nome}.svg`, gerarSvg(aba.doc), 'image/svg+xml');
   }, { precisaAba: true, icone: 'menu_exportar.png' }),
-  c('exportar.pdf', 'Exportar PDF (imprimir)...', () => {
-    const aba = abaAtiva();
-    if (aba) imprimir(aba.doc);
-  }, { atalho: 'Alt+E', precisaAba: true, icone: 'menu_exportar.png' }),
 
   c('editar.desfazer', 'Desfazer', desfazer, { atalho: 'Ctrl+Z', icone: 'undo_16.png', precisaAba: true }),
   c('editar.refazer', 'Refazer', refazer, { atalho: 'Ctrl+R', icone: 'redo_16.png', precisaAba: true }),

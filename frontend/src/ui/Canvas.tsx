@@ -61,7 +61,7 @@ import './motor.css';
 
 interface Props {
   onEditar: (f: Forma) => void;
-  areaRef: React.RefObject<HTMLDivElement>;
+  areaRef: React.RefObject<HTMLDivElement | null>;
   onScroll: () => void;
 }
 
