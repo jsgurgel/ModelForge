@@ -17,7 +17,7 @@
 
 import { describe, expect, it } from 'vitest';
 import { mapaGlobal } from './atalhos';
-//# Registra os comandos como o App faz: os de comandosD sobrescrevem os de mesmo id em comandos.ts.
+//# Registra os comandos como o App faz (exportar.pdf fica em comandosD.ts).
 import './comandosD';
 
 describe('atalho de exportação', () => {

@@ -40,6 +40,31 @@ describe('paginação', () => {
     expect(ultimo.y + ultimo.h).toBeCloseTo(2000);
   });
 
+  it('ajustar amplia um diagrama pequeno até ocupar a página e o centraliza', () => {
+    const area = areaUtilMm(CONFIG_PADRAO);
+    const p = dividirEmPaginas(440, 360, { ...CONFIG_PADRAO, escala: 'ajustar' });
+    expect(p.paginas).toHaveLength(1);
+    expect(p.escala).toBeGreaterThan(1);
+    //# A dimensão que limita (altura, na A4 paisagem) preenche a área útil; a outra sobra e é dividida nos dois lados.
+    expect(360 * MM_POR_PX * p.escala).toBeCloseTo(area.h);
+    expect(p.deslocY).toBeCloseTo(0);
+    expect(p.deslocX).toBeCloseTo((p.recorteW - 440) / 2);
+    expect(p.deslocX).toBeGreaterThan(0);
+  });
+
+  it('ajustar não amplia além de 400%', () => {
+    const p = dividirEmPaginas(10, 10, { ...CONFIG_PADRAO, escala: 'ajustar' });
+    expect(p.escala).toBe(4);
+    expect(p.deslocX).toBeGreaterThan(0);
+    expect(p.deslocY).toBeGreaterThan(0);
+  });
+
+  it('com várias páginas não há deslocamento', () => {
+    const p = dividirEmPaginas(3000, 2000, { ...CONFIG_PADRAO, escala: 100 });
+    expect(p.deslocX).toBe(0);
+    expect(p.deslocY).toBe(0);
+  });
+
   it('conteúdo pequeno a 100% fica numa página só', () => {
     const p = dividirEmPaginas(400, 300, { ...CONFIG_PADRAO, escala: 100 });
     expect(p.paginas).toHaveLength(1);

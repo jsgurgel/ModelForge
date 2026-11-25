@@ -35,7 +35,7 @@ export interface ConfigPagina {
   papel: Papel;
   orientacao: Orientacao;
   margemMm: number;
-  /** Percentual (10..400) ou 'ajustar' para caber em uma página. */
+  /** Percentual (10..400) ou 'ajustar' para ocupar uma página (reduz ou amplia, até 400%). */
   escala: number | 'ajustar';
   /** fmImpressao "Proporcional" (padrão ligado): escala pela configuração. Desligado: usa Colunas x Linhas. */
   proporcional?: boolean;
@@ -80,6 +80,9 @@ export interface PlanoDePaginas {
   /** Lado de cada recorte (px de tela) e área útil (mm). */
   recorteW: number;
   recorteH: number;
+  /** Deslocamento (px de tela) que centraliza o conteúdo quando ele cabe numa página só; 0 com várias páginas. */
+  deslocX: number;
+  deslocY: number;
 }
 
 /** Divide o conteúdo (px de tela) em páginas segundo a escala e a área útil do papel. */
@@ -92,7 +95,7 @@ export function dividirEmPaginas(conteudoW: number, conteudoH: number, c: Config
   if (fixo) {
     //# Colunas x Linhas escolhidas: a escala (uniforme) faz o conteúdo caber exatamente nessa grade de páginas.
     escala = Math.min(4, (c.colunas! * area.w) / (cw * MM_POR_PX), (c.linhas! * area.h) / (ch * MM_POR_PX));
-  } else if (c.escala === 'ajustar') escala = Math.min(1, area.w / (cw * MM_POR_PX), area.h / (ch * MM_POR_PX));
+  } else if (c.escala === 'ajustar') escala = Math.min(4, area.w / (cw * MM_POR_PX), area.h / (ch * MM_POR_PX));
   else escala = Math.min(4, Math.max(0.1, c.escala / 100));
   const recorteW = area.w / (MM_POR_PX * escala);
   const recorteH = area.h / (MM_POR_PX * escala);
@@ -106,7 +109,9 @@ export function dividirEmPaginas(conteudoW: number, conteudoH: number, c: Config
       paginas.push({ col, row, x, y, w: Math.max(0, Math.min(recorteW, cw - x)), h: Math.max(0, Math.min(recorteH, ch - y)) });
     }
   }
-  return { escala, cols, rows, paginas, recorteW, recorteH };
+  const deslocX = cols === 1 ? Math.max(0, (recorteW - cw) / 2) : 0;
+  const deslocY = rows === 1 ? Math.max(0, (recorteH - ch) / 2) : 0;
+  return { escala, cols, rows, paginas, recorteW, recorteH, deslocX, deslocY };
 }
 
 // ---------------------------------------------------------------------------- PDF
