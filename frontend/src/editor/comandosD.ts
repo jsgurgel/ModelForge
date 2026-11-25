@@ -48,7 +48,7 @@ registrar(
     executar: async () => { const a = abaAtiva(); if (a) { const r = await exportarImagem(a.doc, 'bmp', 1); baixar(r.nome, r.blob, r.blob.type); } },
   },
   {
-    id: 'exportar.pdf', rotulo: 'Exportar PDF...', icone: 'menu_exportar.png', precisaAba: true,
+    id: 'exportar.pdf', rotulo: 'Exportar PDF...', atalho: 'Alt+E', icone: 'menu_exportar.png', precisaAba: true,
     executar: async () => {
       const a = abaAtiva();
       if (!a) return;
